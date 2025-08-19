@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bg {
+            background: #74ebd5;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #ACB6E5, #74ebd5);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #ACB6E5, #74ebd5);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+
+            width: 100dvw;
+            height: 100dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            /* background-color: red; */
+            /* width: 100dvw;
+            height: 100dvh; */
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 150px 75px 240px 135px 75px 75px 150px;
+            grid-template-rows: 150px 150px 150px;
+
+
+
+
+        }
+
+        .box {
+            background-color: red;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .one {
+            grid-area: 1/1/2/3;
+            background: #0575E6;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #021B79, #0575E6);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+        .two {
+            grid-area: 1/3/2/6;
+            background: #FF8008;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #FFC837, #FF8008);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #FFC837, #FF8008);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            display: flex;
+        }
+
+        .three {
+            grid-area: 1/6/2/8;
+            background: #0575E6;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #021B79, #0575E6);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #021B79, #0575E6);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .four {
+            grid-area: 2/1/3/4;
+            background: #fe8c00;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #f83600, #fe8c00);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #f83600, #fe8c00);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .five {
+            grid-area: 2/4/3/8;
+            background: #2193b0;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #6dd5ed, #2193b0);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #6dd5ed, #2193b0);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .six {
+            grid-area: 3/1/4/2;
+            background: #4b6cb7;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #182848, #4b6cb7);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #182848, #4b6cb7);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+        .seven {
+            grid-area: 3/2/4/5;
+            background: #833ab4;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+        .eight {
+            grid-area: 3/5/4/7;
+            background: #ff00cc;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #333399, #ff00cc);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #333399, #ff00cc);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+
+        .nine {
+            grid-area: 3/7/4/8;
+            background: #ff00cc;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #333399, #ff00cc);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to left, #333399, #ff00cc);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        }
+
+        .one-data {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .one h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        .one p {
+            color: white;
+            font-size: 20px;
+        }
+
+        .two h2 {
+            color: white;
+            font-size: 15px;
+            text-align: center;
+
+        }
+
+        .two p {
+            color: white;
+            font-size: 18px;
+        }
+
+        .left {
+            width: 50%;
+            /* height: 100%; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .right {
+            height: 100%;
+        }
+
+        .right img {
+            height: 100%;
+        }
+
+        .three h1 {
+            color: white;
+            font-size: 50px;
+        }
+
+        .three p {
+            color: white;
+            font-size: 20px;
+        }
+
+        .leftvk {
+            height: 100%;
+            /* width: 50%; */
+        }
+
+        .leftvk img {
+            height: 100%;
+        }
+
+        .vk {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .vkdata {
+            color: white;
+        }
+
+        .leftpc {
+            height: 100%;
+
+        }
+
+        .leftpc img {
+            height: 100%;
+        }
+
+        .pc {
+            display: flex;
+        }
+
+        .pcdata {
+            color: white;
+            font-size: 20px;
+        }
+
+        .icon {
+            font-size: 40px;
+            color: white;
+        }
+
+        .pic {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .picdata {
+            color: white;
+            font-size: 15px;
+            margin-top: 7px;
+        }
+
+        .sevendata {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        .sevendata h1 {
+            color: white;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .sevendata p {
+            color: white;
+            text-align: center;
+        }
+
+        .btn {
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: none;
+
+        }
+
+        .vkone {
+            font-size: 20px;
+        }
+
+        .rightvk button {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="container">
+            <div class="box one one-data">
+                <h1>1260</h1>
+                <p>Sixes</p>
+            </div>
+
+            <div class="box two">
+                <div class="left">
+                    <h2>Winners</h2>
+                    <p>CHENNAI SUPER KINGS</p>
+                </div>
+                <div class="right">
+                    <img src="csk.png" alt="csk">
+                </div>
+            </div>
+
+            <div class="box three one-data">
+                <h1>14</h1>
+                <p>Hundreds</p>
+            </div>
+
+            <div class="box four vk">
+                <div class="leftvk">
+                    <img src="vkohli.png
+                    " alt="virat">
+                </div>
+                <div class="rightvk">
+                    <button class="btn">orange cap</button>
+                    <table class="vkdata" cellpadding="4" cellspacing="4">
+                        <tr>
+                            <td class="vkone"><b>Virat Kohli</b></td>
+                        </tr>
+                        <tr>
+                            <td>Total runs</td>
+                            <td>741</td>
+                        </tr>
+                        <tr>
+                            <td>Strike Rate</td>
+                            <td>154.7</td>
+                        </tr>
+                        <tr>
+                            <td>Matches Played</td>
+                            <td>15</td>
+                        </tr>
+                    </table>
+                </div>
+
+
+            </div>
+
+            <div class="box five vk">
+                <div class="leftpc">
+                    <img src="pc.png
+                    " alt="pc">
+                </div>
+                <div class="rightpc">
+                    <button class="btn">Fair Play</button>
+                    <table class="pcdata">
+                        <tr>
+                            <td><b>Pat Cummins</b></td>
+                        </tr>
+                        <tr>
+                            <td>Sunrisers Hyderabad</td>
+                        </tr>
+                        <tr>
+                            <td>Points</td>
+                            <td>173</td>
+                        </tr>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="box six  pic">
+                <i class="fa-solid fa-image icon"></i>
+                <h1 class="picdata">Pics</h1>
+            </div>
+
+            <div class="box seven sevendata">
+                <h1>Intresting Facts</h1>
+                <p>"Kolkata Knight Riders crowned champions for the third time,having previously won in 2012,2014"</p>
+            </div>
+
+            <div class="box eight pic">
+                <i class="fa-solid fa-clipboard-list icon"></i>
+                <h1 class="picdata">Match Reports</h1>
+            </div>
+
+            <div class="box nine pic">
+                <i class="fa-regular fa-circle-play icon"></i>
+                <h1 class="picdata">Highlights</h1>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
